@@ -17,9 +17,31 @@ namespace OneClassPoo_sat.Classes
 
         public Date(int year, int month, int day) // 05/06/2016
         {
-            _year = year;
-            _month = month; 
-            _day = day;
+            _year = ValidateYear(year);
+            _month = ValidateMonth(month); 
+            _day = ValidateDay(day);
+        }
+
+        private int ValidateDay(int day)
+        {
+            throw new NotImplementedException();
+        }
+
+        private int ValidateYear(int year)
+        {
+            throw new NotImplementedException();
+        }
+
+        private int ValidateMonth(int month)
+        {
+            if (month >= 1 && month <= 12)
+            {
+                return month;
+            }
+            else
+            {
+
+            }
         }
 
         public override string ToString()
