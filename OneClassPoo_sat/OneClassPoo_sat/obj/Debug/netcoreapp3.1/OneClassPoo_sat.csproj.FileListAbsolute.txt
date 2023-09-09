@@ -1,0 +1,14 @@
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.exe
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.deps.json
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.runtimeconfig.json
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.runtimeconfig.dev.json
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.dll
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\bin\Debug\netcoreapp3.1\OneClassPoo_sat.pdb
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.csproj.AssemblyReference.cache
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.AssemblyInfoInputs.cache
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.AssemblyInfo.cs
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.csproj.CoreCompileInputs.cache
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.dll
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.pdb
+C:\Practicas\OneClassPoo_sat\OneClassPoo_sat\OneClassPoo_sat\obj\Debug\netcoreapp3.1\OneClassPoo_sat.genruntimeconfig.cache
