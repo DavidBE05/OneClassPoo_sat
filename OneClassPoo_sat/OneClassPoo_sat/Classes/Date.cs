@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace OneClassPoo_sat.Classes
@@ -19,27 +20,67 @@ namespace OneClassPoo_sat.Classes
         {
             _year = ValidateYear(year);
             _month = ValidateMonth(month); 
-            _day = ValidateDay(day);
+            _day = ValidateDay(day, month, year);
         }
 
-        private int ValidateDay(int day)
+        private int ValidateDay(int day, int month, int year)
         {
-            throw new NotImplementedException();
+            if (month == 2 && day == 29 && IsLeapYear(year))
+            {
+                return day;
+            }
+            else
+            {
+                //Exception creation
+                throw new YearException(String.Format("El año {0} no es bisiesto!", year));
+            }
+
+            int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+
+            if (day >= 1 && day <= daysPerMonth[month])
+            {
+                return day;     
+            }
+            else
+            {
+                //Exception creation
+                throw new YearException(String.Format("El dia {0} no es bisiesto!", year));
+
+            }
+
+        }
+
+        private bool IsLeapYear(int year)
+        {
+            bool isLeapYear = year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
+            return isLeapYear;
         }
 
         private int ValidateYear(int year)
         {
-            throw new NotImplementedException();
+            if (year >= 1900)
+            {
+                return year;
+            }
+            else
+            {
+                //Exception creation
+                throw new YearException(String.Format("El mes {0} no es valido!", year));
+
+            }
         }
 
         private int ValidateMonth(int month)
         {
             if (month >= 1 && month <= 12)
-            {
+            { 
                 return month;
             }
             else
             {
+                //Exception creation
+                throw new MonthException(String.Format("El mes {0} no es valido!", month));
 
             }
         }
@@ -54,5 +95,25 @@ namespace OneClassPoo_sat.Classes
         }
 
         #endregion
+    }
+
+    [Serializable]
+    internal class YearException : Exception
+    {
+        public YearException()
+        {
+        }
+
+        public YearException(string message) : base(message)
+        {
+        }
+
+        public YearException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected YearException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
     }
 }

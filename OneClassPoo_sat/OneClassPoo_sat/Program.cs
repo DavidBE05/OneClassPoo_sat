@@ -23,8 +23,11 @@ namespace OneClassPoo_sat
 
             //Instaciar las clases Date.cs
             Date dateObject = new Date(year, month, day);
+            Console.WriteLine("\n");
             Console.WriteLine(dateObject.ToString());
 
+
         }
+        catch (Exception):
     }
 }
