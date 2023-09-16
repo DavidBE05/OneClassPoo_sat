@@ -56,20 +56,6 @@ namespace OneClassPoo_sat
 
                 Console.WriteLine(salaryEmployee);
 
-                /*
-                Console.WriteLine("Ingrese horas trabajadas");
-                hours = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Ingrese valor de las horas");
-                hourValue = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Ingrese numero de venctas");
-                sales= Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Ingrese el porcentaje de comision");
-                commisionpercentaje= Convert.ToDecimal(Console.ReadLine()); 
-                */
-
                 Console.WriteLine("Contrato empleado");
 
                 Console.WriteLine("Ingrese el nombre completo");
@@ -96,17 +82,38 @@ namespace OneClassPoo_sat
                     HourValue = hourValue,
                 };
 
-                
                 Console.WriteLine(hourlyemployee);
-                /*
+
+
+                Console.WriteLine("Comision del empleado");
+
+                Console.WriteLine("Ingrese el nombre completo");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese apellidos");
+                lastName = Console.ReadLine();
+
+
+                Console.WriteLine("Ingrese numero de ventas");
+                sales = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el porcentaje de comision");
+                commisionpercentaje = Convert.ToDecimal(Console.ReadLine());
+
                 CommissionEmployee commissionemployee = new CommissionEmployee()
                 {
-                    Sales= sales,   
+                    Id = 123,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Sales = sales,   
                     CommisionPercentaje = commisionpercentaje/100,
                 };
 
                 Console.WriteLine(commissionemployee);
-                */
+          
 
             }
             catch (Exception ex)

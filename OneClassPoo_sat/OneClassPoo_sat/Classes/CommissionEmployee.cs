@@ -16,7 +16,10 @@ namespace OneClassPoo_sat.Classes
 
         public override string ToString()
         {
-            return $"{base.ToString()} \n\t Comisios: {GetValueToPay()}";
+            return $"{base.ToString()}" +
+                $"\n\t Porcentaje de Comisiòn......{CommisionPercentaje:P2}" +
+                $"\n\t Ventas...................{Sales:C2}" +
+                $"\n\t Salario...............{GetValueToPay():C2} \n\t";
         }
     }
 }
