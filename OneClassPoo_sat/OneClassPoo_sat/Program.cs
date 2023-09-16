@@ -16,7 +16,7 @@ namespace OneClassPoo_sat
                 //Declarar algunas varibales
                 int day, month, year, sales;
                 string firstName, lastName;
-                decimal salary, hours, hourValue, commisionpercentaje;
+                decimal salary, hours, hourValue, commisionpercentaje, Base;
 
                 Console.WriteLine("Ingrese el dia");
                 day = Convert.ToInt32(Console.ReadLine()); //ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
@@ -113,7 +113,31 @@ namespace OneClassPoo_sat
                 };
 
                 Console.WriteLine(commissionemployee);
-          
+
+
+                Console.WriteLine("Comision base del empleado");
+
+                Console.WriteLine("Ingrese el nombre completo");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese apellidos");
+                lastName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese comision base");
+                Base = Convert.ToDecimal(Console.ReadLine());
+
+                BaseCommissionEmployee baseCommissionEmployee=new BaseCommissionEmployee() 
+                {
+                    Id = 123,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Base=Base,
+                };
+
+                Console.WriteLine(baseCommissionEmployee);
 
             }
             catch (Exception ex)
