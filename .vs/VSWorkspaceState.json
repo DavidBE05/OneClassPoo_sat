@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\OneClassPoo_sat",
+    "\\OneClassPoo_sat\\OneClassPoo_sat",
+    "\\OneClassPoo_sat\\OneClassPoo_sat\\Classes"
   ],
-  "SelectedNode": "\\C:\\Practicas\\OneClassPoo_sat",
+  "SelectedNode": "\\OneClassPoo_sat\\OneClassPoo_sat\\Classes\\Date.cs",
   "PreviewInSolutionExplorer": false
 }

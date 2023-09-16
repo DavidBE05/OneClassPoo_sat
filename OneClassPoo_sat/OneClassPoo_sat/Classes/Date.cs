@@ -29,10 +29,13 @@ namespace OneClassPoo_sat.Classes
             {
                 return day;
             }
-            else
+
+
+            if (month == 2 && day == 29 && IsLeapYear(year))    
             {
-                //Exception creation
-                throw new YearException(String.Format("El año {0} no es bisiesto!", year));
+               
+                bool isLeapYear = false;
+                IsLeapYearException(isLeapYear, year);
             }
 
             int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -44,11 +47,19 @@ namespace OneClassPoo_sat.Classes
             }
             else
             {
-                //Exception creation
-                throw new YearException(String.Format("El dia {0} no es bisiesto!", year));
+                throw new DayException(String.Format("El dia {0} no es valido para el mes {1}" , day, month));
 
             }
 
+        }
+
+        private void IsLeapYearException(bool isLeapYear, int year) 
+        {
+            if (!isLeapYear)
+            {
+                throw new YearException(String.Format("El año {0} no es bisiesto!", year));
+            }
+        
         }
 
         private bool IsLeapYear(int year)
