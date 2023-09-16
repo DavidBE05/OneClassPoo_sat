@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OneClassPoo_sat.Classes
 {
-    internal class Date
+    public class Date
     {
         #region Fields
 

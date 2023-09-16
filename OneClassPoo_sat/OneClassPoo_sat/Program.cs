@@ -15,6 +15,9 @@ namespace OneClassPoo_sat
 
                 //Declarar algunas varibales
                 int day, month, year;
+                string firstName, lastName;
+                decimal salary;
+
                 Console.WriteLine("Ingrese el dia");
                 day = Convert.ToInt32(Console.ReadLine()); //ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
 
@@ -28,6 +31,29 @@ namespace OneClassPoo_sat
                 Date dateObject = new Date(year, month, day);
                 Console.WriteLine("\n");
                 Console.WriteLine(dateObject.ToString());
+
+                Console.WriteLine("Ingrese el nombre completo");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese apellidos");
+                lastName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese salario");
+                salary = Convert.ToDecimal(Console.ReadLine());
+
+                SalaryEmployee salaryEmployee = new SalaryEmployee() 
+                {  
+                    Id= 123,
+                    FirstName=firstName,
+                    LastName=lastName,
+                    BirthDate=dateObject,
+                    HiringDate=dateObject,  
+                    IsActive=true,
+                    Salary=salary,
+                };
+
+                Console.Clear();
+                Console.WriteLine(salaryEmployee);
 
             }
             catch (Exception ex)
