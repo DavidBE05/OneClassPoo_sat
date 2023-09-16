@@ -14,9 +14,9 @@ namespace OneClassPoo_sat
                 Console.WriteLine("-------------");
 
                 //Declarar algunas varibales
-                int day, month, year;
+                int day, month, year, sales;
                 string firstName, lastName;
-                decimal salary, hours, hourValue;
+                decimal salary, hours, hourValue, commisionpercentaje;
 
                 Console.WriteLine("Ingrese el dia");
                 day = Convert.ToInt32(Console.ReadLine()); //ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
@@ -30,7 +30,9 @@ namespace OneClassPoo_sat
                 //Instaciar las clases Date.cs
                 Date dateObject = new Date(year, month, day);
                 Console.WriteLine("\n");
-                Console.WriteLine(dateObject.ToString());
+                //nsole.WriteLine(dateObject.ToString());
+
+                Console.WriteLine("Salario empleado");
 
                 Console.WriteLine("Ingrese el nombre completo");
                 firstName = Console.ReadLine();
@@ -41,35 +43,70 @@ namespace OneClassPoo_sat
                 Console.WriteLine("Ingrese salario");
                 salary = Convert.ToDecimal(Console.ReadLine());
 
+                SalaryEmployee salaryEmployee = new SalaryEmployee()
+                {
+                    Id = 123,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
+                    Salary = salary,
+                };
+
+                Console.WriteLine(salaryEmployee);
+
+                /*
                 Console.WriteLine("Ingrese horas trabajadas");
                 hours = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Ingrese valor de las horas");
                 hourValue = Convert.ToInt32(Console.ReadLine());
 
-                SalaryEmployee salaryEmployee = new SalaryEmployee() 
-                {  
-                    Id= 123,
-                    FirstName=firstName,
-                    LastName=lastName,
-                    BirthDate=dateObject,
-                    HiringDate=dateObject,  
-                    IsActive=true,
-                    Salary=salary,
-                };
+                Console.WriteLine("Ingrese numero de venctas");
+                sales= Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine(salaryEmployee);
+                Console.WriteLine("Ingrese el porcentaje de comision");
+                commisionpercentaje= Convert.ToDecimal(Console.ReadLine()); 
+                */
 
+                Console.WriteLine("Contrato empleado");
+
+                Console.WriteLine("Ingrese el nombre completo");
+                firstName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese apellidos");
+                lastName = Console.ReadLine();
+
+                Console.WriteLine("Ingrese horas trabajadas");
+                hours = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Ingrese valor de las horas");
+                hourValue = Convert.ToInt32(Console.ReadLine());
 
                 HourlyEmployee hourlyemployee = new HourlyEmployee()
                 {
+                    Id = 123,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = true,
                     Hours = hours,
                     HourValue = hourValue,
                 };
 
-                Console.Clear();
+                
                 Console.WriteLine(hourlyemployee);
+                /*
+                CommissionEmployee commissionemployee = new CommissionEmployee()
+                {
+                    Sales= sales,   
+                    CommisionPercentaje = commisionpercentaje/100,
+                };
 
+                Console.WriteLine(commissionemployee);
+                */
 
             }
             catch (Exception ex)
