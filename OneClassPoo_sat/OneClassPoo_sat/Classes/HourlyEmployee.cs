@@ -4,18 +4,19 @@ using System.Text;
 
 namespace OneClassPoo_sat.Classes
 {
-    public class SalaryEmployee : Employee
+    public class HourlyEmployee : Employee
     {
-        public decimal Salary { get; set; }
+        public decimal Hours {get; set; }
+        public decimal HourValue { get; set; }
 
         public override decimal GetValueToPay()
         {
-            return Salary;  
+            return Hours * HourValue;
         }
 
         public override string ToString()
         {
-            return $"{base.ToString()} \n\t Salario: {GetValueToPay():C2}";
+            return $"{base.ToString()} \n\t HorasExtras: {GetValueToPay():C2}";
         }
     }
 }

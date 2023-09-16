@@ -16,7 +16,7 @@ namespace OneClassPoo_sat
                 //Declarar algunas varibales
                 int day, month, year;
                 string firstName, lastName;
-                decimal salary;
+                decimal salary, hours, hourValue;
 
                 Console.WriteLine("Ingrese el dia");
                 day = Convert.ToInt32(Console.ReadLine()); //ToInt32, ToDecimal, ToDouble, ToFloat, ToBoolel, para cambiar el console Read Line
@@ -41,6 +41,12 @@ namespace OneClassPoo_sat
                 Console.WriteLine("Ingrese salario");
                 salary = Convert.ToDecimal(Console.ReadLine());
 
+                Console.WriteLine("Ingrese horas trabajadas");
+                hours = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Ingrese valor de las horas");
+                hourValue = Convert.ToInt32(Console.ReadLine());
+
                 SalaryEmployee salaryEmployee = new SalaryEmployee() 
                 {  
                     Id= 123,
@@ -52,8 +58,18 @@ namespace OneClassPoo_sat
                     Salary=salary,
                 };
 
-                Console.Clear();
                 Console.WriteLine(salaryEmployee);
+
+
+                HourlyEmployee hourlyemployee = new HourlyEmployee()
+                {
+                    Hours = hours,
+                    HourValue = hourValue,
+                };
+
+                Console.Clear();
+                Console.WriteLine(hourlyemployee);
+
 
             }
             catch (Exception ex)
